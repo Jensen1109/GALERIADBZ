@@ -1,0 +1,144 @@
+body {
+    margin: 0;  /*Elimina margenes por defecto del navegador */
+    background-position: center; /* Centra la imagen del fondo*/
+    background-size: cover;/* Ajusta la imagen para cubrir toda la pantalla*/
+    background-attachment: fixed; /* Hace que el fondo quede fijo al hacer scroll*/
+    font-family: 'Orbitron', sans-serif;/* Fuente personalizada desde google fonts*/
+}
+
+/* titulo*/
+.titulo{
+    text-align: center; /* centra el texto horizontalmente*/
+    margin-top: 1rem;/* margen superior usando unidad relativa rem*/
+}
+
+/*galeria contenedora */
+.galeria {
+    background-color: rgba(255, 255, 255, 0.8); /* fondo blanco con transparencia (rgba)*/
+    padding: 2em; /* Espacio interiror usando em*/
+    width: 95vw; /*Ancho relativo al viewport 95% del ancho del navegador */
+    min-height: 100vh; /* minimo alto igual al alto total del navegador*/
+    font-size: 1rem; /* tamaño base de fuente para  heredad con rem */
+    margin: 1rem; /*  margen alrededor de la galeria usando rem */
+    
+    
+}
+
+/* tarjetas de personajes */ 
+.personajes {
+    display:inline-block; /*permite que las tarjetas se alineen horizontalmente */
+    width: 120px; /* ancho fijo de la tarjeta*/
+    margin: 1em;/*margen exterior con em */
+    padding: 1em; /* espacio interior con em*/
+    border-radius: 10px;/* bordes redondeados*/
+    text-align: center;/* centrar el texto de ccada tarjeta*/
+    vertical-align: top;/* alineacion superior entre tarjetas*/
+    box-shadow: 2px 2px 10px #000;/* sombre para dar efecto de elevacion*/
+    
+    
+}
+/* imagenes de las tarjetas*/
+.personajes img {
+    width: 100%; /* imagen ocipa todo el ancho del contenedor*/
+    height: auto;/* altura proporcionar para no distorcionar*/
+    object-fit: contain;/* escala la imagen sin recortarla*/
+    max-width: 100px;/* ancho maximo*/
+    max-height:100px;/* alto maximo*/
+    min-height:100px;/* alto minimo*/
+    min-width: 100px;/* ancho minimo para uniformidad*/
+}
+
+/* 1. Color hexadecimal */
+.personajes:nth-child(1) {
+    background-color: #f0f8ff;/* color pastel claro en hex*/
+    color: #000; /* texto negro*/
+}
+
+/* colores rgb*/
+.personajes:nth-child(2) {
+    background-color: rgb(220, 220, 255);
+}
+
+.personajes:nth-child(3) {
+    background-color: rgb(255, 200, 200);
+}
+
+.personajes:nth-child(4) {
+    background-color: rgb(200, 255, 200);
+}
+
+.personajes:nth-child(5) {
+    background-color: rgb(255, 255, 200);
+}
+/*  Gradiente lineal */
+.personajes:nth-child(6) {
+    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+}
+/* Gradiente radial */
+.personajes:nth-child(7) {
+    background: radial-gradient(circle, #cce5ff, #e6f0ff);
+}
+
+/*Estilos de texto avanzados */
+.personajes:nth-child(8) {
+    background-color: #fff;
+    text-transform: uppercase; /* convierte texto a mayusculas*/
+    letter-spacing: 1px; /*espacio entre letras */
+    text-shadow: 1px 1px 1px #333; /* sombra de texto*/
+}
+
+/*Fuente en cursiva y negrita */
+.personajes:nth-child(9) {
+    font-size: 1.0rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*  Uso de rem */
+.personajes:nth-child(10) p {
+    font-size: 1rem; /* rem: relativo a html */
+    margin: 1em;
+    
+}
+
+/* Uso de em */
+.personajes:nth-child(11) p {
+    font-size: 1em; /* em: relativo al contenedor */
+    margin: 1em;
+    
+    
+}
+/* Comparación de unidades */
+.personajes:nth-child(12) { 
+    font-size: 16px;
+}
+.personajes:nth-child(12) .comparacion {
+    font-size: 16px; /* px - unidad absoluta */
+    margin: 16px; /* px */
+}
+.personajes:nth-child(12) .comparacion-em {
+    font-size: 1em; /* em - relativa al contenedor padre */
+    margin: 1em; /* em */
+}
+.personajes:nth-child(12) .comparacion-rem {
+    font-size: 1rem; /* rem - relativa al font-size del HTML */
+    margin: 1rem; /* rem */
+}
+
+/*Variación de tamaño y peso de fuente */
+.personajes:nth-child(34) {
+    font-size: 1.0rem;
+    font-style: italic;
+    font-weight:bold;
+}
+
+.personajes:nth-child(35) {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight:normal;
+}
+.personajes:nth-child(36) {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight:normal;
+}
