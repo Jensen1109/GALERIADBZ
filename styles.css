@@ -1,55 +1,63 @@
+* {
+    margin: 0; /*Elimina margenes por defecto del navegador*/
+    padding: 0; /*le damos un espacio de 0*/
+}
+
 body {
-    margin: 0;  /*Elimina margenes por defecto del navegador */
+    margin: 0;  /*Elimina margenes por defecto del navegador*/
     background-position: center; /* Centra la imagen del fondo*/
     background-size: cover;/* Ajusta la imagen para cubrir toda la pantalla*/
     background-attachment: fixed; /* Hace que el fondo quede fijo al hacer scroll*/
-    font-family: 'Orbitron', sans-serif;/* Fuente personalizada desde google fonts*/
+    font-family: "Bungee Spice", sans-serif;/* Fuente personalizada desde google fonts*/
+    background-image: url("/img/fondo.jpg");/* Aplica la imagen fondo.jpg como fondo del elemento*/
+
+}
+
+main {
+    background-color: rgba(49, 39, 39, 0.8); /* fondo blanco con transparencia (rgba)*/
+    width: 99.2vw; /* Punto 16: Usa unidades vw para definir el ancho. */
+    height: 670vh; /* Punto 16: Usa unidades vh para definir la altura. */
+    margin: auto;
 }
 
 /* titulo*/
 .titulo{
+    padding-top: 20px; /* Agrega un espacio interno de 20 pixeles en laparte superior del contenido del elemento*/
     text-align: center; /* centra el texto horizontalmente*/
-    margin-top: 1rem;/* margen superior usando unidad relativa rem*/
 }
 
 /*galeria contenedora */
 .galeria {
-    background-color: rgba(255, 255, 255, 0.8); /* fondo blanco con transparencia (rgba)*/
+    
     padding: 2em; /* Espacio interiror usando em*/
-    width: 95vw; /*Ancho relativo al viewport 95% del ancho del navegador */
+    max-width: 1200px; /*Ancho relativo al viewport 95% del ancho del navegador */
     min-height: 100vh; /* minimo alto igual al alto total del navegador*/
     font-size: 1rem; /* tamaño base de fuente para  heredad con rem */
-    margin: 1rem; /*  margen alrededor de la galeria usando rem */
-    /*   background-image: url(); imagen de fondo*/
-    background-image:url(data:image/jpeg;base64,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);
-
-    
+    margin: auto; /*  margen alrededor de la galeria usando rem */
+    gap: 1em; /* Establece un espacio separacion de 1em entre filas y columnas en elementos de tipo grido o flex*/
     
 }
 
 /* tarjetas de personajes */ 
 .personajes {
-    display:inline-block; /*permite que las tarjetas se alineen horizontalmente */
-    width: 120px; /* ancho fijo de la tarjeta*/
-    margin: 1em;/*margen exterior con em */
-    padding: 1em; /* espacio interior con em*/
-    border-radius: 10px;/* bordes redondeados*/
-    text-align: center;/* centrar el texto de ccada tarjeta*/
-    vertical-align: top;/* alineacion superior entre tarjetas*/
-    box-shadow: 2px 2px 10px #000;/* sombre para dar efecto de elevacion*/
-    background-image:red;
-    
+    border: 3px solid #a8a8a8;  /* Aplica un borde de 3 pixeles con color gris */ 
+    border-radius: 10px; /* Redondea las esquinas del borde con un radio de 10 pixeles*/ 
+    padding: 15px; /* Agrega un espacio internode 15 pixeles entre el borde y el contenido del elemento*/ 
+    width: 230px; /* Define un ancho fijo de 230 pixeles para el elemento*/
+    text-align: center; /* centra horizontalmente el contenido de texto dentro del elemento*/
+    background-color: #f9f9f9; /*Establece un color de fondo gris muy claro*/
+    display: inline-block; /* permite que el elemento se comporte como bloque pero en linea con otros elementos*/
+    margin-bottom: 20px; /* Agrega un espacio externo de 20 pixxeles debajo del elemento*/
+    margin-left: 20px; /* Agrega un espacio externo de 20 pixeles a la izquierda del elemento*/
+    margin-top: 20px; /*Agrega un espacio externo de 20 pixeles arriba del elemento */
     
 }
 /* imagenes de las tarjetas*/
 .personajes img {
-    width: 100%; /* imagen ocipa todo el ancho del contenedor*/
-    height: auto;/* altura proporcionar para no distorcionar*/
-    object-fit: contain;/* escala la imagen sin recortarla*/
-    max-width: 100px;/* ancho maximo*/
-    max-height:100px;/* alto maximo*/
-    min-height:100px;/* alto minimo*/
-    min-width: 100px;/* ancho minimo para uniformidad*/
+    object-fit:contain; /*Hace que el contenido como una imagen o video se ajuste completamente del contenedor manteniendo su proporcion original. no se recortanada pero puede quedar espacio vacio  */
+    max-width: 100%; /*Establece que el ancho maximo del elemento no puede excender el 100% del ancho de su contenedor padre */
+    height: 350px; /*Establece una altura fija  de 350 pixeles para el elemento, sin importar el contenido que tenga dentro*/
+
 }
 
 /* 1. Color hexadecimal */
@@ -60,33 +68,37 @@ body {
 
 /* colores rgb*/
 .personajes:nth-child(2) {
-    background-color: rgb(220, 220, 255);
+    background-color: rgb(220, 220, 255); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255*/
 }
 
 .personajes:nth-child(3) {
-    background-color: rgb(255, 200, 200);
+    background-color: rgb(255, 200, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
 }
 
 .personajes:nth-child(4) {
-    background-color: rgb(200, 255, 200);
+    background-color: rgb(200, 255, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
     
 }
 
 .personajes:nth-child(5) {
-    background-color: rgb(255, 255, 200);
+    background-color: rgb(255, 255, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+}
+.personajes:nth-child(31){
+    background-color: rgb(150, 250, 110); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+
 }
 /*  Gradiente lineal */
 .personajes:nth-child(6) {
-    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+    background: linear-gradient(to right, #27df0f, #c8ff00); 
 }
 /* Gradiente radial */
 .personajes:nth-child(7) {
-    background: radial-gradient(circle, #cce5ff, #e6f0ff);
+    background: radial-gradient(circle, #ffeb3b, #ff9800);
 }
 
 /*Estilos de texto avanzados */
 .personajes:nth-child(8) {
-    background-color: #fff;
+    background-color: #fff; /* */
     text-transform: uppercase; /* convierte texto a mayusculas*/
     letter-spacing: 1px; /*espacio entre letras */
     text-shadow: 1px 1px 1px #333; /* sombra de texto*/
@@ -94,28 +106,29 @@ body {
 
 /*Fuente en cursiva y negrita */
 .personajes:nth-child(9) {
-    font-size: 1.0rem;
-    font-style: italic;
-    font-weight: bold;
+    font-size: 1.0rem; /*Tamaño de la fuente establecido en 1 rem  (unidades relativas al tamaño de fuente base del documento)*/
+    font-style: italic; /*Estilo de fuente en cursiva*/
+    font-weight: bold; /*Grosor de la fuente en negrita*/
 }
 
 /*  Uso de rem */
 .personajes:nth-child(10) p {
     font-size: 1rem; /* rem: relativo al tamaño base del html */
-    margin: 1em;
+    
     
 }
 
 /* Uso de em */
 .personajes:nth-child(11) p {
     font-size: 1em; /* em: relativo al contenedor */
-    margin: 1em;
+    
+    
     
     
 }
 /* Comparación de unidades */
 .personajes:nth-child(12) { 
-    font-size: 16px;
+    font-size: 16px; /* px - unidad absoluta */
 }
 .personajes:nth-child(12) .comparacion {
     font-size: 16px; /* px - unidad absoluta */
@@ -132,23 +145,11 @@ body {
 
 /*Variación de tamaño y peso de fuente */
 .personajes:nth-child(34) {
-    font-size: 1.0rem;
-    font-style: italic;
-    font-weight:bold;
+    font-size: 1.0rem;  /*Establece el tamaño de la fuente a 1 rem  relativo al tamaño base del documento*/
+    font-style: italic;  /* Aplica estilo de letra en cursiva*/
+    font-weight:bold;  /*Aplica un peso de fuente en negrita*/
 }
-
-.personajes:nth-child(35) {
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight:normal;
-    max-width: 110px;/* ancho maximo*/
-    max-height:164px;/* alto maximo*/
-
-
-}
-.personajes:nth-child(36) {
-    font-size: 1.2rem;
-    font-style: italic;
-    max-width: 110px;/* ancho maximo*/
-    max-height:164px;/* alto maximo*/
+.personajes:nth-child(30){
+    max-width: 230px;  /*Define un ancho maximo de 230 pixeles para evitar que el elemento se expanda  mas alla de ese valor*/
+    height: auto;  /*La altura se ajusta automaticamente al contenido util para mantener proporciones como en imagenes*/
 }
